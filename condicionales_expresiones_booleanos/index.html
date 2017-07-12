@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quienes pueden pasar a ver una pelicula? Ejercicio con condicionales, expresiones y booleanos.</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+  </head>
+  <body>
+
+  <h1>Una persona puede pasar a ver StarWords segun tu edad?</h1>
+
+  </body>
+  <script type="text/javascript">
+
+  //Condicionales en Javascript
+  const starWars7 = 'Star Ward: El despertar de la fuerza'
+  const pgStarWars7 = 13
+
+  const name = 'Gabriel'
+  const age = 26
+
+  const nameSanti = 'santi'
+  const ageSanti = 12;
+
+  // Condicionales
+  // 
+  // Cuando no le asignamos un valor a la variable la tomara como false siempre.
+  // 
+  // tambien le podemos asignar un valor por defecto en el momento de enviar los parametros
+  // tenemos que tener en cuenta que a las constantes no podemos modificarles su valor. en caso de que queramos hacerlo nos dara un error.
+  //  
+  function canWatchStarWars7(name, age, isWithAdult) {
+        if (age >= pgStarWars7) {
+
+            alert(`${name} puede pasar a ver ${starWars7}`);
+
+        }else if(isWithAdult){
+
+          alert(`${name} Puede pasar a ver ${starWars7}.
+            Aunque su edad es es ${age}, se encuentra acopanada/o por un adulto`)
+
+
+        }else{
+
+          alert(`${name} no puede pasar a ver ${starWars7}.
+            Tiene ${age} y necesita ${pgStarWars7}`);
+          }
+      }
+
+      canWatchStarWars7(name, age)
+      canWatchStarWars7(nameSanti, ageSanti, false)
+      /*canWatchStarWars7(nameSanti, ageSanti, true)*/
+  </script>
+</html>

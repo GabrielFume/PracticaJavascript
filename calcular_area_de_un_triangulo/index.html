@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calcula el area de un triangulo. Creando funciones.</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/invie.css"/>
+    <link rel="stylesheet" href="css/media-querie.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+  	console.log("El area de un triangulo de base 5 y altura 7 es: " + 5 * 7 / 2);
+
+  	//Esta es la segunda forma de como concatenar, usamos el $ y dentro de {} hacemos la operacion matematica que queremos
+  	console.log(`El area de un triangulo de base 5 y altura 7 es: ${ 5 * 7 / 2 }`);
+
+	//Es importante tener en cuenta que para poder usar esta forma no se usa ni comillas ni comillas dobles, en ubuntu es el boton debajo de Esc
+  	var base = 5;
+  	var altura = 7;
+  	console.log(`El area de un triangulo de ${base} 5 y ${altura} es: ${ base * altura / 2 }`);
+
+  	//Funciones, con esta funcion podemos pasar parametros y ejecutarlas eso en esa fase del codigo.
+  	function triangleArea(base, altura){
+
+  		return base * altura / 2;
+  	}
+
+  	console.log(`El area de un triangulo de ${base} 5 y ${altura} es: ${ triangleArea(base, altura) }`);
+
+  	//En caso de que queramos solo ejecutar una solo linea de codigo en javascript, este lenguaje nos permite ejecutar esta acciondela seguiente manera.
+  	
+  	//Esta funcion recibe los parametros base y altura y retorna los balores que les asignamos a estas variables anteriormente. 
+  	//Este tipo de funcion se llama "arrow functions"
+  	
+  	const triangulosArea = (base, altura) => base * altura / 2 ;
+
+  	console.log(`El area de un triangulo de ${base} 5 y ${altura} es: ${ triangulosArea(base, altura) }`);
+
+  	var radio;
+  	var diametro;
+  	const circuloAreaRadio = (radio) => radio * radio;
+
+  	console.log(`El area de un triangulo de ${base} 5 y ${altura} es: ${ circuloAreaRadio(radio) }`);
+
+  	const circuloRadioDiametro = (diametro) => diametro / 2 ;
+
+  	console.log(`El area de un triangulo de ${base} 5 y ${altura} es: ${ circuloRadioDiametro(diametro) }`);
+
+
+  	
+
+
+  </script>
+</html>
