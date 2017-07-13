@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Entenidiendo los ciclos for</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+  </head>
+  <body>
+
+  <h1>Cuantos kilometros corre una persona en una semana.</h1>
+
+  </body>
+  <script type="text/javascript">
+
+  const dias = [
+
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado",
+    "Domindo"
+
+  ]
+
+  const nombre = 'Gabriel'
+
+  function correr() {
+
+    const min = 5
+    const max = 10
+    return Math.round( Math.random() * (max - min) ) + min
+  }
+
+  let totalKms = 0
+  const length = dias.length
+  for (var i = 0; i < length; i++) {
+    const kms = correr()
+    totalKms += kms
+    console.log(`El dia ${dias[i]} ${nombre} corrio ${kms} kms`)
+  }
+
+  const promedioKms = totalKms / length
+  console.log(`En promedio ${nombre} corrio: ${promedioKms.toFixed(2)} Kms `)
+
+
+
+  </script>
+</html>
