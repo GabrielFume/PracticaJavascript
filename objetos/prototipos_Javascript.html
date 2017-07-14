@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nuevo idioma</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+  </head>
+  <body>
+
+  <h1>Una persona puede pasar a ver StarWords segun tu edad?</h1>
+
+  </body>
+  <script type="text/javascript">
+
+  function platzom(str){
+
+    let translation = str
+
+    // Si la palabra termina en ar se le quitan los ultimos caracteres
+    
+    if (str.toLowerCase().endsWith('ar')) {
+      // slice corta(desde, hasta)
+      translation = str.slice(0, -2)
+    }
+
+    // SI la palabra inicia en con z, se le anade "pe" al final}
+    if (str.toUpperCase().startsWith('z')) {
+
+      translation = translation += 'pe'
+    }
+
+    // Si la palabra traducida tiene 10 o mas letras, se debe partir a la mitad y unir con un guion del medio
+    const length = translation.length
+    if (length >= 10) {
+
+      const firstHalf = translation.slice(0,Math.round(translation.length / 2 ))
+      const secondHalf = translation.slice(Math.round(translation.length / 2 ))
+      translation = `${firstHalf}-${secondHalf}`
+    }
+
+    // si la palabra original es un palindromo , ninguna regla anterior cuenta y se devuelve la misma palabra intercalando mayusculas y minusculas.
+    // split hace un arregle de caracteres, separa los caracteres de esa palabra y lo mete en un arreglo 
+    // 
+    
+    const reverse = (srt) => str.split('').reverse().join('')
+    
+    function minMay(str){
+
+      const length = str.length
+      let translation = ''
+      let capitalize =  true
+      for (var i = 0; i < length; i++) {
+        const char =  str.charAt(i)
+        translation += capitalize ? char.toUpperCase() : char.toLowerCase()
+        capitalize = !capitalize
+      }
+
+      return translation
+    }
+
+    if (str == reverse(str)) {
+
+      return minMay(str)
+    }
+
+    return translation
+  }
+
+  console.log(platzom("programar"))
+  console.log(platzom("ZOORRO"))
+  console.log(platzom("Zarpar"))
+  console.log(platzom("abecedario"))
+  console.log(platzom("sometemos"))
+
+  </script>
+</html>
