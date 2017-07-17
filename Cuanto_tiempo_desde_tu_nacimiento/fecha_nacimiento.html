@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fecha de nacimiento</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+  </head>
+  <body>
+
+  <h1>Cual es tu fecha de nacimiento?</h1>
+
+  </body>
+  <script type="text/javascript">
+
+  const nacimiento = new Date(1993, 2, 12)
+
+  const hoy = new Date()
+
+  const tiempo = hoy - nacimiento // esto lo hace en milisegundos
+
+  const tiempoSegundos = tiempo / 1000
+
+  const tiempoMin = tiempoSegundos / 60
+
+  const tiempoHor = tiempoMin / 60
+
+  const proximoCumpleanos  = new Date(hoy.getFullYear(), nacimiento.getMonth(), nacimiento.getDate() )
+
+  </script>
+</html>

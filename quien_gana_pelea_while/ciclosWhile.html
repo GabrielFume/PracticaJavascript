@@ -24,17 +24,40 @@ const MAX_POWER = 12
 
 const ambosSiguenVivos = () => vidaManny > 0 && vidaFloyd > 0
 
-let round = 1
+const calcularGolpe = () => Math.round(Math.random() * (MAX_POWER - MIN_POWER) + MIN_POWER)
+
+const mannySigueVivo = () => vidaManny > 0
+
+let round = 0
 
 
 while(ambosSiguenVivos()){
 
+  round ++
   console.log(`Round ${round}`)
 
   const golpeManny = calcularGolpe()
   const golpeFloyd = calcularGolpe()
 
+  if (golpeManny > golpeFloyd) {
+
+    console.log(`Manny ataca a Floyd con un golpe de ${golpeManny}`)
+    vidaFloyd -= golpeManny
+    console.log(`Floyd queda en ${vidaFloyd} de vida`)
+
+
+  }else{
+    console.log(`Floyd ataca a Manny con un golpe de ${golpeFloyd}`)
+    vidaManny -= golpeFloyd
+    console.log(`Manny queda en ${vidaManny} de vida`)
+  }
+
 }
+  if (mannySigueVivo()) {
+    console.log(`Manny gano la pelea. su vida es de ${vidaManny}`)
+  }else{
+    console.log(`Floyd gano la pelea. su vida es de ${vidaFloyd}`)
+  }
 
   </script>
 </html>
