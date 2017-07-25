@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scope de variables</title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+  </head>
+  <body>
+
+  <h1>Objetos en Javascript</h1>
+
+  </body>
+  <script type="text/javascript">
+
+// Scope es la linea 
+// closhures
+
+  var nombre = "Gabriel"
+  function saludar(nombre){
+    
+    if (nombre = "Gabriel") {
+       for (var i = 0; i < 9; i++) {
+         console.log(` ${i} Hola ${nombre}`)
+       }
+    }else{
+      for (var e = 0; i <= 10; i++) {
+        console.log(` ${e} Hola ${nombre}`)
+      }
+    }
+    
+      
+    // hasta este momento nombre tiene un string definido que es Gabriel
+  }
+  // Cuando le asignamos un valor a la funcion nos cambia el valor de la variable nombre
+  saludar("Israel")
+  console.log(`La variable nombre tiene el valor ${nombre}`)
+
+
+  </script>
+</html>
